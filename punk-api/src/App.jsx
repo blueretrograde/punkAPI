@@ -1,11 +1,21 @@
 import "./App.scss";
+import beers from "../../punk-api/src/data/beers"
+import Card from "./components/Card/Card";
 
 const App = () => {
+
+  console.log(beers)
+
+  const beverages = beers.map((beverage) => <Card beverage={beverage.name} image={beverage.image_url} tagline={beverage.tagline}/> )
+    
+    
+
+
   return (
-    <div className="app">
-      <header>
-        <h1>PUNK API</h1>
-      </header>
+    <div>
+      
+        {beverages}
+ 
     </div>
   );
 };

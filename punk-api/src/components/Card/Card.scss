@@ -1,0 +1,27 @@
+.card {
+    background-color: #80DFFA
+}
+
+.card {
+    border-style: solid;
+    width: 30vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card__image {
+    max-width: 50px;
+    max-height: 150px;
+    margin-left: 90px;
+    margin-top: 30px;
+    
+}
+
+.card__name {
+    padding: 0%;
+    margin-bottom: -15px;
+}
