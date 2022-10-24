@@ -1,10 +1,7 @@
 .card {
-    background-color: #80DFFA
-}
-
-.card {
+    background-color: #80DFFA;
     border-style: solid;
-    width: 30vh;
+    width: 40vh;
     height: 40vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +13,7 @@
 .card__image {
     max-width: 50px;
     max-height: 150px;
-    margin-left: 90px;
+    margin-left: 130px;
     margin-top: 30px;
     
 }

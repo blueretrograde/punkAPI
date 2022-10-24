@@ -1,0 +1,9 @@
+.card__display {
+    
+    width: 150vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px;
+    row-gap: 45px;
+
+}

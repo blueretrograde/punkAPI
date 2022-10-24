@@ -1,6 +1,8 @@
 import "./App.scss";
 import beers from "../../punk-api/src/data/beers"
 import Card from "./components/Card/Card";
+import SideNav from "./components/SideNav/SideNav";
+import CardTiles from "./components/CardTiles/CardTiles";
 
 const App = () => {
 
@@ -12,11 +14,15 @@ const App = () => {
 
 
   return (
-    <div>
+    <>
+    <div className="app">
+      <SideNav/>
       
-        {beverages}
+      <CardTiles  beverages = {beverages}/>
+     
  
     </div>
+    </>
   );
 };
 

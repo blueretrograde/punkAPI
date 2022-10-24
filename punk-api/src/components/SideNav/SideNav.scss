@@ -1,0 +1,14 @@
+.sidenav {
+margin-top: 60px;
+height: 500px;
+background-color: #43A8CE;
+display: flex;
+flex-direction: column;
+text-align: center;
+
+}
+
+.sidenav__searchbox {
+    width: 150px;
+    margin-left: 20px;
+}
