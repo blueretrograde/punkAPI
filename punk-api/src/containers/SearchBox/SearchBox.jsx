@@ -2,7 +2,7 @@
 import "./SearchBox.scss"
 
 
-const SearchBox = () => {
+const SearchBox = (onChange) => {
 
 
 
@@ -14,8 +14,8 @@ const SearchBox = () => {
 className="sidenav__searchbox" 
 type="text"
 placeholder="Search.."
+onChange={onChange}
 />
-<button>Search</button>
     </>)
 }
 

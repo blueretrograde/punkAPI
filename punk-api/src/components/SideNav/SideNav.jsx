@@ -1,14 +1,16 @@
 import "../SideNav/SideNav.scss";
 import SearchBox from "../../containers/SearchBox/SearchBox";
 
+
 const SideNav = () => {
+
 
 
     return (
     <nav className="sidenav">
       
       <h3 className="sidenav__heading">Can't find what you're looking for?</h3>
-      <SearchBox  />
+      <SearchBox />
     
 
       <div className="sidenav__checkboxes">

@@ -3,11 +3,11 @@ import "./App.scss";
 import Card from "./components/Card/Card";
 import SideNav from "./components/SideNav/SideNav";
 import CardTiles from "./components/CardTiles/CardTiles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
 
-  const [ Beers1, setBeers1 ] = useState([]) 
+  const [ Beers, setBeers ] = useState([]) 
 
   
 
@@ -18,17 +18,20 @@ const App = () => {
     const res = await fetch(url);
     const data = await res.json();
     
-    setBeers1(data)
+    setBeers(data)
+    console.log(Beers)
   
   }
 
-  getBeverages()
+  
 
-  //UseEffect
+  useEffect(() => {
+    getBeverages()
+  }, )
 
 
 
-const beverages = Beers1.map((beverage) => <Card getBeverages={getBeverages} beverage={beverage.name} image={beverage.image_url} tagline={beverage.tagline}/> )
+const beverages = Beers.map((beverage) => <Card getBeverages={getBeverages} beverage={beverage.name} image={beverage.image_url} tagline={beverage.tagline}/> )
     
     
 
