@@ -1,20 +1,22 @@
 
-import "./SearchBox.scss"
+import "../SearchBox/SearchBox.scss"
+import { useState } from "react"
+import Beers from "../../App.jsx"
 
 
-const SearchBox = (onChange) => {
+const SearchBox = () => {
 
 
 
 
 
-    return(<>
+return(
+    <>
 
 <input
 className="sidenav__searchbox" 
 type="text"
 placeholder="Search.."
-onChange={onChange}
 />
     </>)
 }

@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 const App = () => {
 
   const [ Beers, setBeers ] = useState([]) 
-
   
 
   const getBeverages = async() => {
@@ -19,15 +18,15 @@ const App = () => {
     const data = await res.json();
     
     setBeers(data)
-    console.log(Beers)
+    
   
   }
 
-  
-
   useEffect(() => {
     getBeverages()
-  }, )
+  }, [] )
+
+
 
 
 

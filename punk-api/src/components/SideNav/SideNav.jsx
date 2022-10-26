@@ -1,9 +1,28 @@
 import "../SideNav/SideNav.scss";
 import SearchBox from "../../containers/SearchBox/SearchBox";
-
+// import { useState } from "react";
+// import Beers from "../../App.jsx"
+// import CardTiles from "../CardTiles/CardTiles";
+import CheckBox from "../../components/CheckBox/CheckBox.jsx"
 
 const SideNav = () => {
 
+//   const [searchText, setSearchText] = useState("");
+
+//   const handleInput = (event) => {
+//     const userInput = event.target.value.toLowerCase();
+//     setSearchText(userInput)
+//   }
+
+//   const filteredBeers = Beers.filter((beer) => {
+//     const beerName = beer.name.toLowercase();
+
+//     return beerName.includes(searchText);
+//   })
+
+
+// console.log(filteredBeers)
+  
 
 
     return (
@@ -11,18 +30,10 @@ const SideNav = () => {
       
       <h3 className="sidenav__heading">Can't find what you're looking for?</h3>
       <SearchBox />
-    
+      <CheckBox />
+  
 
-      <div className="sidenav__checkboxes">
-        <input type="checkbox" className="highABV"></input>
-        <label for="htmlFor"> High ABV </label>
-        <input type="checkbox" className="classicRange"></input>
-        <label for="htmlFor"> Classic Range </label>
-        <input type="checkbox" className="acidic"></input> 
-        <label for="htmlFor"> Acidic</label>
 
-    
-      </div>
 
 
     </nav>
