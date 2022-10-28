@@ -5,8 +5,8 @@ import SearchBox from "../../containers/SearchBox/SearchBox";
 // import CardTiles from "../CardTiles/CardTiles";
 import CheckBox from "../../components/CheckBox/CheckBox.jsx"
 
-const SideNav = () => {
-
+const SideNav = ({handleCheckBoxes}) => {
+console.log(handleCheckBoxes)
 //   const [searchText, setSearchText] = useState("");
 
 //   const handleInput = (event) => {
@@ -30,7 +30,7 @@ const SideNav = () => {
       
       <h3 className="sidenav__heading">Can't find what you're looking for?</h3>
       <SearchBox />
-      <CheckBox />
+      <CheckBox handleCheckBoxes={handleCheckBoxes}/>
   
 
 

@@ -1,45 +1,42 @@
 import { useState } from "react"
 import "../../components/CheckBox/CheckBox.scss"
 
-const CheckBox = () => {
 
-  const [highABVFilter, setHighABVFilter] = useState(true)
-  const [classicFilter, setClassicFilter] = useState(true)
-  const [acidicFilter, setAcidicFilter] = useState(true)
+
+const CheckBox = ({handleCheckBoxes}) => {
 
 
 
-  const getHighABV = () => {
-    setHighABVFilter(!highABVFilter)
 
-    if ( highABVFilter === true)
-    console.log("It's true!")
 
-    else 
-    console.log("FAAALSE")
+
+  // const clickHighABV = () => {
+  //   setHighABVFilter(!highABVFilter)
+
+  //   if ( highABVFilter === true)
+  //   console.log("The high ABV filter is on")
+
+  //   else 
+  //     console.log("The high ABV filter is off")
   
-    
+  // }
 
-  }
+  // const clickClassicRange = () => {
+  //   setClassicFilter(!classicFilter)
 
-  const getClassicRange = () => {
-    setClassicFilter(!classicFilter)
+  //   if ( classicFilter === true)
+  //   console.log("The Classic Range filter is on")
 
-    if ( classicFilter === true)
-    console.log("It's true!")
+  //   else 
+  //   console.log("The Classic Range filter is off")
 
-    else 
-    console.log("FAAALSE")
+  // }
 
-    console.log("The Classic Range checkbox is clickeda nd this is the filter's state:", classicFilter)
+  // const clickAcidic = () => {
+  //   setAcidicFilter(!acidicFilter)
+  //   console.log("The Acidic checkbox is clicked and this is the filter's state:", acidicFilter)
 
-  }
-
-  const getAcidic = () => {
-    setAcidicFilter(!acidicFilter)
-    console.log("The Acidic checkbox is clicked and this is the filter's state:", acidicFilter)
-
-  }
+  // }
 
     return (
 
@@ -51,7 +48,9 @@ const CheckBox = () => {
           <input className="checkboxes__checkbox"
             type="checkbox"
             id="highABV"
-            onClick={getHighABV}
+            onClick={handleCheckBoxes}
+            value="highABV"
+            
             
           />
           <label className="checkboxes__label">High ABV</label>
@@ -60,7 +59,8 @@ const CheckBox = () => {
             <input className="checkboxes__checkbox"
               type="checkbox"
               id="classicRange"
-              onClick={getClassicRange}
+              onClick={handleCheckBoxes}
+              value="classicRange"
             
             />
             <label className="checkboxes__label">Classic Range</label>
@@ -69,7 +69,8 @@ const CheckBox = () => {
             <input className="checkboxes__checkbox"
               type="checkbox"
               id="acidic"
-              onClick={getAcidic}
+              onClick={handleCheckBoxes}
+              value="acidic"
               
             />
             <label className="checkboxes__label">Acidic</label>
