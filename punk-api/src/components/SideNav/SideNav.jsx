@@ -30,8 +30,11 @@ const SideNav = ({handleCheckBoxes, handleInput}) => {
     return (
     <nav className="sidenav">
       
+      <div className="sidenav__search">
       <h4 className="sidenav__heading">Can't find what you're looking for?</h4>
       <SearchBox handleInput={handleInput}/>
+
+      </div>
       <CheckBox handleCheckBoxes={handleCheckBoxes}/>
       <img className="sidenav__image" src={image} alt="" />
   

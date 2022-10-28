@@ -23,3 +23,28 @@ text-align: center;
     width: 200px;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    
+    .sidenav{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 120px;
+      }
+
+      .sidenav__search{
+        display: flex;
+        flex-direction: column;
+      }
+ 
+      .sidenav__image {
+        display:none;
+      }
+
+      .sidenav__heading {
+        width: 12vh;
+        font-size: 12px;
+      }
+}
