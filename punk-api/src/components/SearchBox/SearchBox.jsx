@@ -3,8 +3,7 @@ import "../SearchBox/SearchBox.scss"
 
 
 
-const SearchBox = () => {
-
+const SearchBox = ({handleInput, searchText}) => {
 
 
 
@@ -16,6 +15,8 @@ return(
 className="sidenav__searchbox" 
 type="text"
 placeholder="Search.."
+value={searchText}
+onChange={handleInput}
 />
     </>)
 }

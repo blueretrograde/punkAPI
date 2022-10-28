@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import "../../components/CheckBox/CheckBox.scss"
 
 
@@ -8,35 +8,6 @@ const CheckBox = ({handleCheckBoxes}) => {
 
 
 
-
-
-  // const clickHighABV = () => {
-  //   setHighABVFilter(!highABVFilter)
-
-  //   if ( highABVFilter === true)
-  //   console.log("The high ABV filter is on")
-
-  //   else 
-  //     console.log("The high ABV filter is off")
-  
-  // }
-
-  // const clickClassicRange = () => {
-  //   setClassicFilter(!classicFilter)
-
-  //   if ( classicFilter === true)
-  //   console.log("The Classic Range filter is on")
-
-  //   else 
-  //   console.log("The Classic Range filter is off")
-
-  // }
-
-  // const clickAcidic = () => {
-  //   setAcidicFilter(!acidicFilter)
-  //   console.log("The Acidic checkbox is clicked and this is the filter's state:", acidicFilter)
-
-  // }
 
     return (
 

@@ -13,6 +13,8 @@ const App = () => {
 
 
   const [ Beers, setBeers ] = useState([]) 
+
+  const [searchText, setSearchText] = useState("");
   
 
   const getBeverages = async() => {
@@ -100,6 +102,30 @@ const getClassicRangeBeers = () => {
   
   }
 
+  
+//Searchbox 
+
+const handleInput = (event) => {
+  console.log(event)
+
+if (event.target.value !== ""){
+
+  const userInput = event.target.value.toLowerCase();
+  setSearchText(userInput)
+
+console.log("this is the user input coming from the APP:", searchText)
+
+const filteredBeers = Beers.filter(item=> item.name.includes(searchText) )
+setBeers(filteredBeers)
+
+console.log("These are the search results:", filteredBeers)}
+else {
+  getBeverages()
+}
+}
+
+
+
 
 
 
@@ -115,11 +141,8 @@ const acidic = Beers.map((beverage) => <Card getBeverages={getBeverages} beverag
   return (
     <>
     <div className="app">
-      <SideNav handleCheckBoxes={handleCheckBoxes}/>
+      <SideNav handleCheckBoxes={handleCheckBoxes} handleInput={handleInput}/>
       <CardTiles beverages={Beers} highABV={highABV} classicRange={classicRange} acidic={acidic} />
-      {/* {highABVFilter ? <CardTiles  beverages = {highABV} /> : <CardTiles  beverages = {beverages} /> }
-      {classicFilter ? <CardTiles  beverages = {classicRange} /> : <CardTiles  beverages = {beverages} /> }
-      {acidicFilter ? <CardTiles  beverages = {acidic} /> : <CardTiles  beverages = {beverages} /> } */}
       
     </div>
     </>
