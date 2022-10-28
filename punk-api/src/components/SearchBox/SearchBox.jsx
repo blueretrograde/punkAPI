@@ -1,7 +1,6 @@
 
 import "../SearchBox/SearchBox.scss"
-import { useState } from "react"
-import Beers from "../../App.jsx"
+
 
 
 const SearchBox = () => {
